@@ -1,0 +1,56 @@
+{
+  "name": "live-code-tdd-node",
+  "version": "1.0.0",
+  "description": "Live Coding - Glaucia Lemos - API Restful Node.js com Mocha e Chai",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon",
+    "lint": "eslint --ext .js -f .node_modules/eslint-friendly-formatter . --fix",
+    "test": "mocha timeout 10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anizioQ/live-code-tdd-node.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "chai",
+    "mocha"
+  ],
+  "author": "Anizio Queiroz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anizioQ/live-code-tdd-node/issues"
+  },
+  "homepage": "https://github.com/anizioQ/live-code-tdd-node#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.8",
+    "morgan": "^1.9.1",
+    "use-strict": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.17.2",
+    "husky": "^2.3.0",
+    "i": "^0.3.6",
+    "lint-staged": "^8.1.7",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.0"
+  },
+    "husk": {
+      "pre-commit":"lint-staged",
+      "pre-push": "npm run lint"
+    },
+    "lint-staged": {
+      "*.js": ["prettier --write", "git add"]
+    } 
+}
